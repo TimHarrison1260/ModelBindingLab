@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "UserDictionary";
+}
+
+<h2>UserDictionary</h2>
+
+<h3>Enter the names of some users</h3>
+
+@Html.BeginForm()
+{
+    <div style="font-family: Verdana sans-serif; font-size: large; font-weight: bold;">
+        <div style="color: aqua;">
+            <label id="lblFirstName" style="width:400px;">First Name</label>
+            <label id="lblLastname" style="width:400px;">Last Name</label>
+        </div>
+        <div>
+            <input type="hidden" name="[0].Key" value="firstUser" />
+            @Html.TextBox("[0].value.FirstName")
+            @Html.TextBox("[0].value.LastName")
+        </div>
+        <div>
+            <input type="hidden" name="[1].Key" value="secondUser" />
+            @Html.TextBox("[1].value.FirstName")
+            @Html.TextBox("[1].value.LastName")
+        </div>
+        <div>
+            <input type="hidden" name="[2].Key" value="thirdUser" />
+            @Html.TextBox("[2].value.FirstName")
+            @Html.TextBox("[2].value.LastName")
+        </div>
+        <input type="submit" value="Save" />
+    </div>
+}
